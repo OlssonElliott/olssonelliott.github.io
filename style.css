@@ -52,6 +52,7 @@ footer{
 #mail{
     color: orange;
     text-shadow: 10px;
+    margin-top: 80px;
 }
 
 .button1{
@@ -80,23 +81,26 @@ footer{
 
 #buttonPlacement{
     position: absolute;
-    right: 38.5%;
-    top: 125%;
+    right: 38.1%;
+    top: 137.5%;
     display: flex;
     gap: 160px;
 }
 
 #info1{
     position: absolute;
-    top: 35%;
-    left: 20%;
+    top: 26.5%;
+    left: 21%;
     width: 500px;
+    background-color: rgb(37, 38, 52);
+    padding: 30px 30px;
+    border-radius: 3%;
 }
 
 footer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
 }
 
@@ -111,7 +115,7 @@ footer{
 #profilePosition{
     position: absolute;
     top: 32.5%;
-    left: 65%;
+    left: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
