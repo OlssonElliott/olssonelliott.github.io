@@ -1,145 +1,127 @@
-/*Sidans basic layout start---------------------------------------------------------------------------------------------------------------------*/
-
+/* NOLLSTÄLLNING */
 * {
-    margin: 0px;
-    padding: 0px;
- }
-
-header{
-    position: relative;
-    left: 0;
-    top: 0;
-    background-color: rgb(37, 38, 52);
-    width: 100%;
-    height: 120px;
-}
-
-body{
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* BAKGRUND */
+  body {
     margin: 0 !important;
     padding: 0 !important;
-    background-color: rgb(47, 48, 62);
-}
-
-footer{
-    position:fixed;
-    left: 0;
-    bottom: 0;
-    background-color: rgb(37, 38, 52);
-    height: 120px;
+    background: 
+      url("/bilder/transparent-square-tiles.png") repeat,
+      #10202d; 
+    background-size: auto;
+  }
+  
+  /* HEADER */
+  header {
+    position: relative;
     width: 100%;
-}
-/*Sidans basic layout slut---------------------------------------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-/*textformat start---------------------------------------------------------------------------------------------------------------------*/
-
-.header1{
-    color: orange;
+    height: auto; /* Anpassas efter innehållet */
+    margin-top: 20px;
+  }
+  
+  /* NAVIGATION */
+  nav {
+    display: flex;
+    justify-content: center; /* Centrerar innehållet som en grupp */
+    align-items: center;     /* Vertikal centrering */
+    position: relative;      /* Möjliggör absolut positionering av knapparna */
+    height: auto;            /* Anpassa efter innehåll */
+    padding: 10px 20px;      /* Inre avstånd från kanterna */
+  }
+  
+  /* LOGGA */
+  #logga {
+    color: rgb(65, 122, 228);
     font-size: 50px;
-    font-weight: bold;
+    word-spacing: 10px;
     text-shadow: 2px 2px 0 black;
-}
-
-.brödtext1{
-    font-size: 18px;
-    color: orange;
-}
-
-#mail{
-    color: orange;
-    text-shadow: 10px;
-    margin-top: 80px;
-}
-
-.button1{
-    font-size: 20px;
+    position: absolute; /* Placera H1 absolut */
+    left: 50%;          /* Centrera horisontellt */
+    transform: translateX(-50%); /* Justera för att verkligen centrera */
+  }
+  
+  /* KNAPP-POSITIONERING */
+  #buttonPlacement {
+    margin-left: auto;  /* Flytta knapparna till höger */
+    display: flex;
+    gap: 15px;          /* Avstånd mellan knapparna */
+    padding-right: 300px;
+  }
+  
+  /* KNAPP-KLASS */
+  .button1 {
+    font-size: 16px;
     font-weight: bold;
     color: black;
-    background-color: orange;
-    padding: 6px 30px;
+    background-color: rgb(65, 122, 228);
+    padding: 6px 20px;
     border-radius: 50px;
     border: solid 2px black;
-}
-/*textformat slut---------------------------------------------------------------------------------------------------------------------*/
-
-
-
-
-/*textplacering start---------------------------------------------------------------------------------------------------------------------*/
-#logga{
-    color: orange;
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 2px 2px 0 black;
-}
-
-#buttonPlacement{
-    position: absolute;
-    right: 38.1%;
-    top: 137.5%;
-    display: flex;
-    gap: 160px;
-}
-
-#info1{
-    position: absolute;
-    top: 26.5%;
-    left: 21%;
+    cursor: pointer;
+  }
+  
+  /* ARTIKEL (MITTEN) */
+  #info1 {
+    margin: 100px auto; 
     width: 500px;
-    background-color: rgb(37, 38, 52);
-    padding: 30px 30px;
-    border-radius: 3%;
-}
-
-footer{
+    background-color: #000000aa; 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px rgb(65, 122, 228);
+  }
+  
+  /* BRÖDTEXT */
+  .brödtext1 {
+    font-size: 18px;
+    color: rgb(187, 203, 233);
+  }
+  
+  /* PROFILBILDENS KONTAINER */
+  #profilePosition {
     display: flex;
-    flex-direction: column;
-    justify-content:center;
+    justify-content: center; /* Centrerar bilden */
     align-items: center;
-}
-
-/*textplacering slut---------------------------------------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-/* PROFILBILD START---------------------------------------------------------------------------------------------------------------------*/
-#profilePosition{
-    position: absolute;
-    top: 32.5%;
-    left: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#profileContainer{
+    margin-top: 50px;
+  }
+  
+  /* PROFILBILDEN */
+  #profileContainer {
     position: relative;
-    width: 325px;
-    height: 325px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px rgb(37, 38, 52);
-    
-    /* Rör ej, påverkar bildens kvalite */
+    box-shadow: 0 0 0 2px rgb(65, 122, 228);
     overflow: hidden;
-    position: relative;
-}
-
-#profilePic{
-    /* Rör ej, passar in bilden i cirkeln*/
-    position:relative;
-    object-fit:scale-down;
+  }
+  
+  #profilePic {
+    object-fit: scale-down;
     width: 100%;
     height: 100%;
-    transform:scale(1.4);
-    top: 5%;
-}
-/*PROFILBILD SLUT---------------------------------------------------------------------------------------------------------------------*/
+    transform: scale(2.3);
+    position: relative;
+    top: 25%; /* Justera efter behov */
+    left: 15%;
+  }
+  
+  /* FOOTER */
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* MAILTEXT I FOOTER */
+  #mail {
+    margin-top: 80px;
+    color: rgb(65, 122, 228);
+  }
+  
