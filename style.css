@@ -14,22 +14,14 @@
     background-size: auto;
   }
   
-  /* HEADER */
-  header {
-    position: relative;
-    width: 100%;
-    height: auto; /* Anpassas efter innehållet */
-    margin-top: 20px;
-  }
-  
   /* NAVIGATION */
   nav {
     display: flex;
-    justify-content: center; /* Centrerar innehållet som en grupp */
-    align-items: center;     /* Vertikal centrering */
-    position: relative;      /* Möjliggör absolut positionering av knapparna */
-    height: auto;            /* Anpassa efter innehåll */
-    padding: 10px 20px;      /* Inre avstånd från kanterna */
+    justify-content: center; 
+    align-items: center;    
+    position: relative;    
+    height: auto;           
+    padding: 10px 20px;     
   }
   
   /* LOGGA */
@@ -38,16 +30,17 @@
     font-size: 50px;
     word-spacing: 10px;
     text-shadow: 2px 2px 0 black;
-    position: absolute; /* Placera H1 absolut */
-    left: 50%;          /* Centrera horisontellt */
-    transform: translateX(-50%); /* Justera för att verkligen centrera */
+    position: absolute; 
+    left: 50%;          
+    transform: translateX(-50%); 
+    margin-top: 20px;
   }
   
   /* KNAPP-POSITIONERING */
   #buttonPlacement {
-    margin-left: auto;  /* Flytta knapparna till höger */
+    margin-left: auto;  
     display: flex;
-    gap: 15px;          /* Avstånd mellan knapparna */
+    gap: 15px;         
     padding-right: 300px;
   }
   
@@ -65,7 +58,7 @@
   
   /* ARTIKEL (MITTEN) */
   #info1 {
-    margin: 100px auto; 
+    margin: 80px auto; 
     width: 500px;
     background-color: #000000aa; 
     padding: 30px;
@@ -81,13 +74,16 @@
   
   /* PROFILBILDENS KONTAINER */
   #profilePosition {
+    /* display: flex; */
     display: flex;
-    justify-content: center; /* Centrerar bilden */
+    vertical-align: top;
+
+    justify-content: center; 
     align-items: center;
-    margin-top: 50px;
+    margin-top: 60px;
   }
   
-  /* PROFILBILDEN */
+  /*PROFILBILDEN*/
   #profileContainer {
     position: relative;
     width: 200px;
@@ -103,25 +99,45 @@
     height: 100%;
     transform: scale(2.3);
     position: relative;
-    top: 25%; /* Justera efter behov */
+    top: 25%; 
     left: 15%;
   }
   
-  /* FOOTER */
-  footer {
+  #repos {
+    color: rgb(187, 203, 233);
     position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align:center;
+    top: 390px;      
+    right: 20px;     
+    width:auto;    
+    max-height: 80vh;  
+    overflow-y: auto;  
+    padding: 10px;
+    background-color: #000000aa; 
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px rgb(65, 122, 228);
+  }
+
+  .githubrepo a {
+    display: inline-block;          
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(65, 122, 228);
+    padding: 6px 20px;
+    border-radius: 50px;
+    border: solid 2px black;
+    cursor: pointer;
+    text-decoration: none;         
+    margin: 5px;                  
   }
   
   /* MAILTEXT I FOOTER */
   #mail {
-    margin-top: 80px;
     color: rgb(65, 122, 228);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
   }
   
